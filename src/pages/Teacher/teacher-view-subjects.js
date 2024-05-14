@@ -42,26 +42,19 @@ function teacherViewSubjects() {
     const getSubjects = async () => {
       try {
         const firestore = getFirestore();
-        const gradeDocRef = doc(firestore, "grades", `Grade ${grade}`);
-        const gradeDocSnapshot = await getDoc(gradeDocRef);
-        if (gradeDocSnapshot.exists()) {
-          const subjectNames = [];
 
-          // Fetch subcollection names from the 'grade' document
-          const subjectCollectionRef = collection(gradeDocRef, "subjects");
-          const subcollectionsSnapshot = await getDocs(subjectCollectionRef);
-          subcollectionsSnapshot.forEach((subcollectionSnapshot) => {
-            subjectNames.push(subcollectionSnapshot.data().name);
-          });
+        // Reference the grade document directly
+        const gradeDocRef = doc(firestore, "grades", grade.toString()); // Assuming grade is a number
 
-          // console.log("Subcollection names:", subjectNames);
+        // Fetch subcollection names from the 'subjects' subcollection under the grade document
+        const subjectCollectionRef = collection(gradeDocRef, "subjects");
+        const subcollectionsSnapshot = await getDocs(subjectCollectionRef);
 
-          setButtonList(subjectNames);
-        } else {
-          console.log("Grade document not found");
-        }
+        const subjectNames = subcollectionsSnapshot.docs.map((doc) => doc.id);
+
+        setButtonList(subjectNames);
       } catch (error) {
-        console.log("Error getting subjects:", error);
+        console.error("Error getting subjects:", error);
       }
     };
 

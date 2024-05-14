@@ -27,9 +27,9 @@ const ContentStyle = styled("div")(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-ResetPassword.getLayout = function getLayout(page) {
-  return <Layout variant="logoOnly">{page}</Layout>;
-};
+// ResetPassword.getLayout = function getLayout(page) {
+//   return <Layout variant="logoOnly">{page}</Layout>;
+// };
 
 // ----------------------------------------------------------------------
 

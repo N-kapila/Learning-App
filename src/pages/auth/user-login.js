@@ -42,7 +42,7 @@ const HeaderStyle = styled("header")(({ theme }) => ({
   alignItems: "center",
   position: "absolute",
   padding: theme.spacing(3),
-  justifyContent: "space-between",
+  justifyContent: "flex-end",
   [theme.breakpoints.up("md")]: {
     alignItems: "flex-start",
     padding: theme.spacing(7, 5, 0, 7),
@@ -81,11 +81,10 @@ export default function Login() {
     <Page title="Login">
       <RootStyle>
         <HeaderStyle>
-          <Logo />
           {smUp && (
             <Typography variant="body2" sx={{ mt: { md: -2 } }}>
               Don’t have an account? {""}
-              <Link href="/auth/user-register/">
+              <Link href="/">
                 <Link variant="subtitle2">Get started</Link>
               </Link>
             </Typography>
@@ -120,7 +119,7 @@ export default function Login() {
             {!smUp && (
               <Typography variant="body2" align="center" sx={{ mt: 3 }}>
                 Don’t have an account?{" "}
-                <Link href="/auth/user-register/">
+                <Link href="/">
                   <Link variant="subtitle2">Get started</Link>
                 </Link>
               </Typography>

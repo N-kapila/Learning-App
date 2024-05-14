@@ -13,11 +13,11 @@ const ICON_SIZE = {
 };
 
 const menuConfig = [
-  {
-    title: "Register",
-    icon: <Iconify icon={"eva:home-fill"} {...ICON_SIZE} />,
-    path: PATH_AUTH.registerUnprotected,
-  },
+  // {
+  //   title: "Register",
+  //   icon: <Iconify icon={"eva:home-fill"} {...ICON_SIZE} />,
+  //   path: PATH_AUTH.register,
+  // },
   {
     title: "Login",
     icon: <Iconify icon={"eva:home-fill"} {...ICON_SIZE} />,
