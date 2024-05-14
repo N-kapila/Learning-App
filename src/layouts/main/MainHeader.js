@@ -75,12 +75,6 @@ export default function MainHeader() {
             justifyContent: "space-between",
           }}
         >
-          <Logo />
-
-          <Label color="info" sx={{ ml: 1 }}>
-            v3.4.0
-          </Label>
-
           <Box sx={{ flexGrow: 1 }} />
 
           {isDesktop && (

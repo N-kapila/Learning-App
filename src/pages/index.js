@@ -16,6 +16,7 @@ import {
   HomeCleanInterfaces,
   HomeHugePackElements,
 } from "../sections/home";
+import Register from "./auth/register";
 
 // ----------------------------------------------------------------------
 
@@ -38,9 +39,9 @@ export default function HomePage() {
   console.log(process.env.CHATA_ENV ? process.env.CHATA_ENV : "not found");
   return (
     <Page title="The starting point for your next project">
-      <HomeHero />
+      <Register />
 
-      <ContentStyle>
+      {/* <ContentStyle>
         <HomeMinimal />
 
         <HomeHugePackElements />
@@ -56,7 +57,7 @@ export default function HomePage() {
         <HomeLookingFor />
 
         <HomeAdvertisement />
-      </ContentStyle>
+      </ContentStyle> */}
     </Page>
   );
 }

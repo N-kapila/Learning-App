@@ -1,13 +1,13 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 // next
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 // @mui
-import { Box, Link, Container, Typography, Stack } from '@mui/material';
+import { Box, Link, Container, Typography, Stack } from "@mui/material";
 // components
-import Logo from '../../components/Logo';
+import Logo from "../../components/Logo";
 //
-import MainFooter from './MainFooter';
-import MainHeader from './MainHeader';
+import MainFooter from "./MainFooter";
+import MainHeader from "./MainHeader";
 
 // ----------------------------------------------------------------------
 
@@ -18,7 +18,7 @@ MainLayout.propTypes = {
 export default function MainLayout({ children }) {
   const { pathname } = useRouter();
 
-  const isHome = pathname === '/';
+  const isHome = pathname === "/";
 
   return (
     <Stack sx={{ minHeight: 1 }}>
@@ -34,18 +34,19 @@ export default function MainLayout({ children }) {
         <Box
           sx={{
             py: 5,
-            textAlign: 'center',
-            position: 'relative',
-            bgcolor: 'background.default',
+            textAlign: "center",
+            position: "relative",
+            bgcolor: "background.default",
           }}
         >
           <Container>
-            <Logo sx={{ mb: 1, mx: 'auto' }} />
+            {/* <Logo sx={{ mb: 1, mx: "auto" }} /> */}
 
             <Typography variant="caption" component="p">
               © All rights reserved
-              <br /> made by &nbsp;
-              <Link href="https://minimals.cc/">minimals.cc</Link>
+              <br /> made by &nbsp; <br />
+              <b> Nirmal ♠️</b>
+              {/* <Link href="https://minimals.cc/">minimals.cc</Link> */}
             </Typography>
           </Container>
         </Box>
