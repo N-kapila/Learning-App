@@ -43,10 +43,10 @@ export default function MainLayout({ children }) {
             {/* <Logo sx={{ mb: 1, mx: "auto" }} /> */}
 
             <Typography variant="caption" component="p">
-              © All rights reserved
+              {/* © All rights reserved
               <br /> made by &nbsp; <br />
               <b> Nirmal ♠️</b>
-              {/* <Link href="https://minimals.cc/">minimals.cc</Link> */}
+              <Link href="https://minimals.cc/">minimals.cc</Link> */}
             </Typography>
           </Container>
         </Box>

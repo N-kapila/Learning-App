@@ -101,9 +101,17 @@ export default function LoginForm() {
         {!!errors.afterSubmit && (
           <Alert severity="error">{errors.afterSubmit.message}</Alert>
         )}
-
-        <RHFTextField name="email" label="Email address" />
-
+        <Alert severity="info">
+          Use email : <strong>teacher1@gmail.com</strong> / password :
+          <strong> Teacher1</strong>
+        </Alert>{" "}
+        <Alert severity="info" sx={{ mb: 5 }}>
+          Use email : <strong>student1@gmail.com</strong> / password :
+          <strong> Student1</strong>
+        </Alert>
+        <RHFTextField name="email" label="Email addresss" />
+        {/*  Teacher login credentials= teacher1@gmail.com/ Teacher1 */}
+        {/*  Student login credentials=  student1@gmail.com/ Student1 */}
         <RHFTextField
           name="password"
           label="Password"
